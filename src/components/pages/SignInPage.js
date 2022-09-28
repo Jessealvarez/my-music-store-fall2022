@@ -2,13 +2,16 @@ import React from "react";
 import { useState } from "react";
 import Layout from "../layout/Layout";
 import { TextField, Box, Button, Typography } from "@mui/material";
+import { useUser } from "../UserContext";
 
-const SignInPage = ({ user, signIn, signOut }) => {
+const SignInPage = (props) => {
+  const { user, signIn, signOut } = useUser();
+
   const [signInStuff, setSignInStuff] = useState({
     email: "",
     password: "",
   });
-  console.log(signInStuff);
+  //   console.log(signInStuff);
 
   //   const onSubmit = () => {};
 
